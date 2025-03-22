@@ -76,7 +76,7 @@ async def on_ready():
     post_question.start()
 
 # Feature 1: Post trivia question daily
-@tasks.loop(seconds=30)
+@tasks.loop(hours=24)
 async def post_question():
     global current_question, current_answer, has_active_question
     
